@@ -1,6 +1,6 @@
 # EpiDetect
 
-EpiDetect is a web application developed using the MERN stack, designed to predict skin diseases from images captured using your web camera. It uses a fine-tuned ResNet50 model for accurate skin disease detection. The application also supports document upload and summarization with a Q&A chat feature, providing comprehensive functionality for users.
+EpiDetect is a web application developed using the MERN stack, designed to predict skin diseases from images captured using your web camera. It uses a fine-tuned ResNet50 model for accurate skin disease detection.
 
 ## Features
 
@@ -14,25 +14,25 @@ EpiDetect is a web application developed using the MERN stack, designed to predi
 ## Screenshots
 
 ### User Profile
-![User Profile](./path_to_your_image/Screenshot 2024-06-07 175359.png)
+![User Profile](Images/image1.png)
 
 ### Predict Skin Disease
-![Predict Skin Disease](./path_to_your_image/Screenshot 2024-06-07 175417.png)
+![Predict Skin Disease](Images/image2.png)
 
 ### Contact Us
-![Contact Us](./path_to_your_image/Screenshot 2024-06-07 175530.png)
+![Contact Us](Images/image3.png)
 
 ### Dashboard
-![Dashboard](./path_to_your_image/Screenshot 2024-06-07 175542.png)
+![Dashboard](Images/image4.png)
 
 ### Prediction Records
-![Prediction Records](./path_to_your_image/Screenshot 2024-06-07 175600.png)
+![Prediction Records](Images/image5.png)
 
 ### Create Blog Post
-![Create Blog Post](./path_to_your_image/Screenshot 2024-06-07 175612.png)
+![Create Blog Post](Images/image6.png)
 
 ### Login
-![Login](./path_to_your_image/Screenshot 2024-06-07 175638.png)
+![Login](Images/image7.png)
 
 ## Technology Stack
 
@@ -99,19 +99,18 @@ EpiDetect is a web application developed using the MERN stack, designed to predi
 
 ## Usage
 
-1. **User Registration and Login**: Register a new account or login with existing credentials.
+1. **User Registration and Login**: Register a new account or log in with existing credentials.
 2. **Profile Management**: View and update your profile information.
 3. **Skin Disease Prediction**:
    - Navigate to the `Predict` page.
    - Upload an image or capture one using your web camera.
    - Click on `Predict` to get the prediction results.
-4. **Document Upload and Summarization**:
-   - Navigate to the `Dashboard`.
-   - Use the document upload feature to upload PDF documents.
-   - Get summaries and ask questions based on the document content.
-5. **Blog Creation**: Navigate to the `Create Blog` page to create and manage your blog posts.
-6. **Contact Us**: Use the contact form to send messages.
-7. **Prediction Records**: View and download your prediction records in PDF format.
+4. **Blog Creation**: Navigate to the `Create Blog` page to create and manage your blog posts.
+5. **Contact Us**: Use the contact form to send messages.
+6. **Prediction Records**: View and download your prediction records in PDF format.
+
+## Future Work
+I will soon be incorporating a chatbot to recommend natural solutions and treatments for light-scale skin diseases, causes of the disease, and anything relevant to the disease that the patient could find useful.
 
 ## Contributing
 
