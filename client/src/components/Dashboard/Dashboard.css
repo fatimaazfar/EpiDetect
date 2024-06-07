@@ -1,0 +1,25 @@
+.dashboard-container {
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .dashboard-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  
+  .dashboard-link {
+    margin: 0 1rem;
+    padding: 1rem 2rem;
+    background-color: #0056b3;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .dashboard-link:hover {
+    background-color: #ab6900;
+  }
+  

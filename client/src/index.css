@@ -1,0 +1,52 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #f9f9f9; /* Light background color */
+  color: #333; /* Dark text color for readability */
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+h2 {
+  color: #0056b3; /* Dark blue color for headings */
+}
+
+.error {
+  color: red;
+  font-size: 0.875rem;
+}
+
+.btn {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 1rem; /* Added margin for spacing */
+}
+
+.btn:hover {
+  background-color: #003d80; /* Darker blue for hover state */
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .footer {
+    text-align: left;
+  }
+}
