@@ -65,18 +65,18 @@ EpiDetect is a web application developed using the MERN stack, designed to predi
 
 3. Install backend dependencies:
     ```sh
-    cd backend
+    cd server
     npm install
     ```
 
 4. Install frontend dependencies:
     ```sh
-    cd ../frontend
+    cd ../client
     npm install
     ```
 
-5. Set up environment variables for backend:
-    - Create a `.env` file in the `backend` directory.
+5. Set up environment variables for server:
+    - Create a `.env` file in the `server` directory.
     - Add the following environment variables:
       ```env
       MONGO_URI=your_mongodb_connection_string
