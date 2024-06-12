@@ -85,13 +85,13 @@ EpiDetect is a web application developed using the MERN stack, designed to predi
 
 6. Run the backend server:
     ```sh
-    cd ../backend
-    npm start
+    cd ../server
+    node server.js
     ```
 
 7. Run the frontend server:
     ```sh
-    cd ../frontend
+    cd ../client
     npm start
     ```
 
