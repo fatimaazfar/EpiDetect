@@ -5,8 +5,8 @@ const User = require('../models/User'); // Import User model
 async function predictDisease(imagePath, userId) {
   return new Promise((resolve, reject) => {
     const scriptPath = path.resolve(__dirname, '../predict.py');
-    const command = `python "${scriptPath}" "${imagePath}"`;
-
+    // const command = `python "${scriptPath}" "${imagePath}"`;
+    const command = `python3 "${scriptPath}" "${imagePath}"`;
     exec(command, async (error, stdout, stderr) => {
       if (error) {
         console.error(`exec error: ${error}`);

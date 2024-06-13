@@ -2,28 +2,32 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const dotenv = require('dotenv');
+const morgan = require('morgan');
 const path = require('path');
 
-// Load environment variables
-dotenv.config();
+// Set JWT_SECRET as an environment variable
+process.env.JWT_SECRET = 'skindiseaseapp123';
 
 const app = express();
 
 // Middleware
 app.use(bodyParser.json());
 app.use(cors());
+
+// Logging middleware
+app.use(morgan('dev'));
+
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 app.use('/reports', express.static(path.join(__dirname, 'reports')));
 
 // DB Config
-const db = process.env.MONGO_URI;
+const db = 'mongodb://localhost:27017/skin-disease-app';
 
-// Connect to MongoDB
+// Connect to MongoDB with updated options
 mongoose
-  .connect(db, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => console.log('MongoDB Connected'))
-  .catch(err => console.log(err));
+  .connect(db)
+  .then(() => console.log('MongoDB Connected at', db))
+  .catch(err => console.error('MongoDB Connection Error:', err));
 
 // Define Routes
 app.use('/api/users', require('./routes/api/users'));
@@ -40,7 +44,18 @@ if (process.env.NODE_ENV === 'production') {
   });
 }
 
+// Logging middleware for unhandled errors
+app.use((err, req, res, next) => {
+  console.error('Unhandled Error:', err);
+  res.status(500).send('Internal Server Error');
+});
+
+// Log incoming requests
+app.use((req, res, next) => {
+  console.log('Incoming Request:', req.method, req.originalUrl);
+  next();
+});
+
 // Start Server
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, '0.0.0.0', () => console.log(`Server running on port ${PORT}`));
-
+app.listen(PORT, () => console.log(`Server started at http://localhost:${PORT}`));

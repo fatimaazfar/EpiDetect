@@ -17,7 +17,9 @@ import Contact from './components/Contact/Contact';
 import Dashboard from './components/Dashboard/Dashboard';
 import BlogPostForm from './components/Blog/BlogPostForm';
 import PrivateRoute from './components/routing/PrivateRoute';
+import ChatBot from './components/ChatBot/ChatBot';
 import './App.css';
+import PredictionsAndChatPage from './pages/PredictionsAndChatPage';
 
 if (localStorage.token) {
   setAuthToken(localStorage.token);
@@ -41,13 +43,15 @@ const App = () => {
               <Route path="/register" element={<Register />} />
               <Route path="/profile" element={<PrivateRoute component={Profile} />} />
               <Route path="/records" element={<PrivateRoute component={Records} />} />
-              <Route path="/predict" element={<PrivateRoute component={Predict} />} />
+              {/* <Route path="/predict" element={<PrivateRoute component={Predict} />} /> */}
+              <Route path="/predict" element={<PrivateRoute component={PredictionsAndChatPage} />}  />
               <Route path="/about" element={<About />} />
               <Route path="/blog" element={<Blog />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/dashboard" element={<PrivateRoute component={Dashboard} />} />
               <Route path="/create-blog" element={<PrivateRoute component={BlogPostForm} />} />
               <Route path="*" element={isAuthenticated ? <Navigate to="/dashboard" /> : <Navigate to="/about" />} />
+              <Route path="/chatbot" element={<PrivateRoute component={ChatBot} />} />
             </Routes>
           </main>
           <Footer />

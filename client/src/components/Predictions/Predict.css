@@ -9,6 +9,7 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   background-color: #fff;
   border-radius: 10px;
+  /* padding-top: 10vh;  */
 }
 
 .predict-form {
@@ -67,4 +68,20 @@
 .error {
   color: red;
   margin-top: 20px;
+}
+.webcam-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%; /* Adjust width as needed */
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-right: 15px;
+}
+
+.webcam-container video {
+  max-width: 100%; /* Ensure the video fills its container */
+  max-height: 1000px; /* Adjust height as needed */
 }

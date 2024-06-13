@@ -3,18 +3,13 @@
   background-color: #050045;
   color: white;
   text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure the footer is above other content */
 }
 
-.footer-links {
-  margin-top: 0.5rem;
-}
-
-.footer-links a {
-  margin: 0 0.5rem;
-  color: white;
-  text-decoration: none;
-}
-
-.footer-links a:hover {
-  text-decoration: underline;
+.content {
+  padding-bottom: 3rem; /* Increase padding to make space for footer */
+  /* Add any other styling for your content area */
 }
