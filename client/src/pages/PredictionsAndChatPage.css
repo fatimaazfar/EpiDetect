@@ -1,11 +1,31 @@
+/* Ensure the body and html take up the full height */
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main container for predictions and chatbot */
 .predictions-chat-container {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .predictions-container,
-  .chatbot-container {
-    flex: 1;
-    margin-right: 20px; /* Adjust margin as needed */
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  flex: 1; /* This ensures the container takes up remaining space between header and footer */
+  margin-bottom: 400px;
+
+}
+
+/* Individual containers */
+.predictions-container,
+.chatbot-container {
+  flex: 1;
+  margin-right: 20px; /* Adjust margin as needed */
+}
+
+/* Footer styling */
+footer {
+  margin-top: auto; /* Pushes footer to the bottom */
+  background-color: #f1f1f1; /* Example background color */
+  text-align: center; /* Center-align text */
+  padding: 10px 0; /* Padding for the footer */
+}

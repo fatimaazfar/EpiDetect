@@ -1,15 +1,41 @@
+/* Resets to ensure consistent styling across browsers */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Sets up the body to use flexbox layout that fills the entire height of the viewport */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures the body is at least as tall as the viewport */
+}
+
+/* Content area styling to make sure it expands to fill available space */
+.content {
+  flex: 1; /* Grows to fill available space, pushing the footer down */
+}
+
+/* Footer styling to ensure it stays at the bottom and has consistent styling */
 .footer {
   padding: 1rem;
   background-color: #050045;
   color: white;
   text-align: center;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  z-index: 1000; /* Ensure the footer is above other content */
+  margin-top: 280px;
+  /* margin-bottom: 0px; */
+  /* margin-left: 50px;
+  margin-right: 50px; */
+  position: relative;
 }
 
-.content {
-  padding-bottom: 3rem; /* Increase padding to make space for footer */
-  /* Add any other styling for your content area */
+.footer-links a {
+  margin: 0 0.5rem;
+  color: white;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
 }
