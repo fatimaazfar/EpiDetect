@@ -35,6 +35,7 @@ app.use('/api/auth', require('./routes/api/auth'));
 app.use('/api/predictions', require('./routes/api/predictions'));
 app.use('/api/blogs', require('./routes/api/blogs'));
 app.use('/api/contact', require('./routes/api/contact'));
+app.use('/api/chatbot', require('./routes/api/chatbot'));
 
 // Serve static assets if in production
 if (process.env.NODE_ENV === 'production') {
